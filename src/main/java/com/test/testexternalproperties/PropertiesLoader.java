@@ -8,13 +8,13 @@ import org.springframework.stereotype.Component;
 @Component
 public class PropertiesLoader {
 
-    @Value("${test.integer}")
+    @Value("${test.integer:0000}")
     private int testInteger;
 
-    @Value("${test.string.foo}")
+    @Value("${test.string.foo:WRONG}")
     private String fooString;
 
-    @Value("${test.string.bar}")
+    @Value("${test.string.bar:WRONG}")
     private String barString;
 
     @PostConstruct
